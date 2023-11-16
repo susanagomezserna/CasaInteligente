@@ -33,32 +33,31 @@ st.subheader("Presiona *ON/OFF* para encender o apagar las luces de tu casa.")
 col1, col2 = st.columns(2)
 
 with col1:
-if st.button('ON'):
-    act1="ON"
-    client1= paho.Client("SGS")                           
-    client1.on_publish = on_publish                          
-    client1.connect(broker,port)  
-    message =json.dumps({"Act1":act1})
-    ret= client1.publish("LucesSGS", message)
- 
-    #client1.subscribe("Sensores")
-    
-    
-else:
-    st.write('')
+    if st.button('ON'):
+        act1="ON"
+        client1= paho.Client("SGS")                           
+        client1.on_publish = on_publish                          
+        client1.connect(broker,port)  
+        message =json.dumps({"Act1":act1})
+        ret= client1.publish("LucesSGS", message)
+     
+        #client1.subscribe("Sensores")
+        
+        
+    else:
+        st.write('')
 
 with col2: 
-if st.button('OFF'):
-    act1="OFF"
-    client1= paho.Client("SGS")                           
-    client1.on_publish = on_publish                          
-    client1.connect(broker,port)  
-    message =json.dumps({"Act1":act1})
-    ret= client1.publish("LucesSGS", message)
-  
-    
-else:
-    st.write('')
+    if st.button('OFF'):
+        act1="OFF"
+        client1= paho.Client("SGS")                           
+        client1.on_publish = on_publish                          
+        client1.connect(broker,port)  
+        message =json.dumps({"Act1":act1})
+        ret= client1.publish("LucesSGS", message)
+        
+    else:
+        st.write('')
 
 st.subheader("Desliza para *abrir o cerrar* tu puerta.")
 
