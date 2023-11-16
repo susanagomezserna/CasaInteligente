@@ -28,8 +28,8 @@ client1.on_message = on_message
 
 
 
-st.title("Interfaces Multimodales")
-st.subheader("CONTROL POR VOZ")
+st.title("Casa Inteligente")
+st.subheader("Control por voz")
 
 image = Image.open('voice_ctrl.png')
 
@@ -38,7 +38,9 @@ st.image(image, width=200)
 
 
 
-st.write("Toca el Botón y habla ")
+st.subtitle("Toca el Botón y dale instrucciones")
+st.write("Para encender y apagar las luces: Turn on/Turn off")
+st.write("Para abrir y cerrar la puerta: Open/Close")
 
 stt_button = Button(label=" Inicio ", width=200)
 
