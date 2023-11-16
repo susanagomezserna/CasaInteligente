@@ -26,7 +26,7 @@ client1.on_message = on_message
 
 
 st.title("Casa Inteligente")
-st.subheader("Control manual")
+st.subheader("Control *manual*")
 st.write('')
 st.subheader("Presiona *ON/OFF* para encender o apagar las luces de tu casa.")
 
