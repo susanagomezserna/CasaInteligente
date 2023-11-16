@@ -35,7 +35,7 @@ image = Image.open('voice_ctrl.png')
 
 st.image(image, width=200)
 
-
+st.divider()
 
 
 st.subheader("Toca el Botón y dale instrucciones")
