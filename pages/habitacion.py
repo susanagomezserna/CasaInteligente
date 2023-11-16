@@ -43,13 +43,13 @@ col1, col2 = st.columns(2)
 with col1: 
     image = Image.open('bombillo.png')
 
-    st.image(image, width=200)
+    st.image(image, width=100)
     st.write("Para encender y apagar las luces: *Turn on/Turn off*")
 
 with col2:  
     image = Image.open('door2.png')
 
-    st.image(image, width=200)
+    st.image(image, width=100)
     st.write("Para abrir y cerrar la puerta: *Open/Close*")
 
 stt_button = Button(label=" Inicio ", width=200)
