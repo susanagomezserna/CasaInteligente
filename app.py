@@ -25,7 +25,10 @@ client1.on_message = on_message
 
 
 
-st.title("MQTT Control")
+st.title("Casa Inteligente")
+st.subtitle("Control manual")
+st.write('')
+st.subtitle("Presiona ON/OFF para encender o apagar las luces de tu casa.")
 
 if st.button('ON'):
     act1="ON"
@@ -53,10 +56,12 @@ if st.button('OFF'):
 else:
     st.write('')
 
-values = st.slider('Selecciona el rango de valores',0.0, 100.0)
-st.write('Values:', values)
+st.subtitle("Desliza para abrir o cerrar tu puerta.")
 
-if st.button('Enviar valor analógico'):
+values = st.slider('',0.0, 100.0)
+st.write('Apertura:', values)
+
+if st.button('Ejecutar acción'):
     client1= paho.Client("SGS")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)   
