@@ -26,9 +26,9 @@ client1.on_message = on_message
 
 
 st.title("Casa Inteligente")
-st.subtitle("Control manual")
+st.subheader("Control manual")
 st.write('')
-st.subtitle("Presiona ON/OFF para encender o apagar las luces de tu casa.")
+st.subheader("Presiona ON/OFF para encender o apagar las luces de tu casa.")
 
 if st.button('ON'):
     act1="ON"
@@ -56,7 +56,7 @@ if st.button('OFF'):
 else:
     st.write('')
 
-st.subtitle("Desliza para abrir o cerrar tu puerta.")
+st.subheader("Desliza para abrir o cerrar tu puerta.")
 
 values = st.slider('',0.0, 100.0)
 st.write('Apertura:', values)
