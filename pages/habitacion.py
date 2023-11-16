@@ -26,16 +26,6 @@ port=1883
 client1= paho.Client("SGS1")
 client1.on_message = on_message
 
-title_alignment=
-"""
-<style>
-#the-title {
-  text-align: center
-}
-</style>
-"""
-st.markdown(title_alignment, unsafe_allow_html=True)
-
 st.title("Casa Inteligente")
 st.subheader("Control por *voz*")
 
