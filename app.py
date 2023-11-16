@@ -28,8 +28,11 @@ client1.on_message = on_message
 st.title("Casa Inteligente")
 st.subheader("Control manual")
 st.write('')
-st.subheader("Presiona ON/OFF para encender o apagar las luces de tu casa.")
+st.subheader("Presiona *ON/OFF* para encender o apagar las luces de tu casa.")
 
+col1, col2 = st.columns(2)
+
+with col1:
 if st.button('ON'):
     act1="ON"
     client1= paho.Client("SGS")                           
@@ -44,6 +47,7 @@ if st.button('ON'):
 else:
     st.write('')
 
+with col2: 
 if st.button('OFF'):
     act1="OFF"
     client1= paho.Client("SGS")                           
@@ -56,7 +60,7 @@ if st.button('OFF'):
 else:
     st.write('')
 
-st.subheader("Desliza para abrir o cerrar tu puerta.")
+st.subheader("Desliza para *abrir o cerrar* tu puerta.")
 
 values = st.slider('',0.0, 100.0)
 st.write('Apertura:', values)
