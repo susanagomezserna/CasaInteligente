@@ -33,6 +33,10 @@ st.subheader("Presiona *ON/OFF* para encender o apagar las luces de tu casa.")
 col1, col2 = st.columns(2)
 
 with col1:
+     
+    image = Image.open('on.png')
+
+    st.image(image, width=100)
     if st.button('ON'):
         act1="ON"
         client1= paho.Client("SGS")                           
@@ -47,7 +51,10 @@ with col1:
     else:
         st.write('')
 
-with col2: 
+with col2:         
+    image = Image.open('off.png')
+
+    st.image(image, width=100)
     if st.button('OFF'):
         act1="OFF"
         client1= paho.Client("SGS")                           
@@ -58,6 +65,11 @@ with col2:
         
     else:
         st.write('')
+
+     
+image = Image.open('door.png')
+
+st.image(image, width=150)
 
 st.subheader("Desliza para *abrir o cerrar* tu puerta.")
 
