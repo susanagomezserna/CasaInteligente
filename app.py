@@ -2,6 +2,7 @@ import paho.mqtt.client as paho
 import time
 import streamlit as st
 import json
+from PIL import Image
 values = 0.0
 act1="OFF"
 
