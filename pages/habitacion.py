@@ -38,7 +38,7 @@ st.image(image, width=200)
 
 
 
-st.subtitle("Toca el Botón y dale instrucciones")
+st.subheader("Toca el Botón y dale instrucciones")
 st.write("Para encender y apagar las luces: Turn on/Turn off")
 st.write("Para abrir y cerrar la puerta: Open/Close")
 
