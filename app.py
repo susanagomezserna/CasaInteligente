@@ -67,7 +67,7 @@ with col2:
     else:
         st.write('')
 
-     
+st.divider()     
 image = Image.open('door.png')
 
 st.image(image, width=150)
